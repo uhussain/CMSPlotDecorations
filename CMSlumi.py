@@ -3,7 +3,8 @@ import ROOT
 def CMSlumi(pad,
         iPeriod = 4,
         iPosX = 11,
-        lumiText = ''
+        lumiText = '',
+        extraText="Preliminary"
     ) :
     '''
     iPeriod = 1*(0/1 7 TeV) + 2*(0/1 8 TeV)  + 4*(0/1 13 TeV)
@@ -25,8 +26,7 @@ def CMSlumi(pad,
     cmsText     = "CMS"
     cmsTextFont   = 61  
 
-    writeExtraText = True
-    extraText   = "Preliminary"
+    writeExtraText = extraText != ""
     extraTextFont = 52 
 
     lumiTextSize     = 0.6
