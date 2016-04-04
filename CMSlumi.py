@@ -37,7 +37,7 @@ def CMSlumi(pad,
 
     relPosX    = 0.045
     relPosY    = 0.035
-    relExtraDY = 1.2
+    relExtraDY = 1.3
 
     extraOverCmsTextSize  = 0.76
 
