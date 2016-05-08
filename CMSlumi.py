@@ -3,7 +3,8 @@ import ROOT
 def CMSlumi(pad,
         iPeriod = 4,
         iPosX = 11,
-        lumiText = ''
+        lumiText = '',
+        extraText="Preliminary"
     ) :
     '''
     iPeriod = 1*(0/1 7 TeV) + 2*(0/1 8 TeV)  + 4*(0/1 13 TeV)
@@ -25,8 +26,7 @@ def CMSlumi(pad,
     cmsText     = "CMS"
     cmsTextFont   = 61  
 
-    writeExtraText = True
-    extraText   = "Preliminary"
+    writeExtraText = extraText != ""
     extraTextFont = 52 
 
     lumiTextSize     = 0.6
@@ -37,7 +37,7 @@ def CMSlumi(pad,
 
     relPosX    = 0.045
     relPosY    = 0.035
-    relExtraDY = 1.2
+    relExtraDY = 1.3
 
     extraOverCmsTextSize  = 0.76
 
@@ -68,7 +68,8 @@ def CMSlumi(pad,
     b = pad.GetBottomMargin()
     e = 0.025
 
-    pad.cd()
+    if pad != ROOT.TVirtualPad.Pad():
+        pad.cd()
 
     if( iPeriod==1 ):
         lumiText += lumi_7TeV
@@ -118,7 +119,8 @@ def CMSlumi(pad,
         latex.SetTextSize(cmsTextSize*t)    
         latex.DrawLatex(l,1-t+lumiTextOffset*t,cmsText)
     
-    pad.cd()
+    if pad != ROOT.TVirtualPad.Pad():
+        pad.cd()
 
     posX_ = 0
     if( iPosX%10<=1 ):
