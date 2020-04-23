@@ -27,7 +27,7 @@ def CMSlumi(pad,
     cmsTextFont   = 61  
 
     writeExtraText = extraText != ""
-    extraTextFont = 62 
+    extraTextFont = 61 
 
     lumiTextSize     = 0.6
     lumiTextOffset   = 0.2
