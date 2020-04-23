@@ -113,7 +113,7 @@ def CMSlumi(pad,
     
     extraTextSize = extraOverCmsTextSize*cmsTextSize
     
-    latex.SetTextFont(61)
+    latex.SetTextFont(62)
     latex.SetTextAlign(31) 
     latex.SetTextSize(lumiTextSize*t)    
 
