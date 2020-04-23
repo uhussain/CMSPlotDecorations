@@ -27,17 +27,23 @@ def CMSlumi(pad,
     cmsTextFont   = 61  
 
     writeExtraText = extraText != ""
-    extraTextFont = 52 
+    extraTextFont = 61
 
     lumiTextSize     = 0.6
     lumiTextOffset   = 0.2
-
+    
+    padRatio = float(pad.GetWw())/pad.GetWh()
+    
     cmsTextSize      = 0.75
+    #cmsTextSize      = 0.75 if padRatio < 1.1 else 0.85
     cmsTextOffset    = 0.1
 
-    relPosX    = 0.045
-    relPosY    = 0.035
-    relExtraDY = 1.3
+    #relPosX    = 0.04 
+    #relPosY    = (0.035 if padRatio < 1.1 else 0.04)
+    #relExtraDY = 1.2 if padRatio < 1.1 else 1.3
+    relPosX    = 0.04
+    relPosY    = 0.07#0.035
+    relExtraDY = 1.3#1.3
 
     extraOverCmsTextSize  = 0.76
 
